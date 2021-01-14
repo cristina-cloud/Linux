@@ -49,7 +49,7 @@ total 28
 -rw-r--r--. 1 root root 6259 May 18  2016 CentOS-Vault.repo 
 ```
 
-#### 4. Chec
+#### 4. Check ####
 ```
 4. [centos@ip-10 yum.repos.d]$ vi CentOS-Base.repo
 [base]
@@ -78,7 +78,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 ```
 -> When trying to enter the mirrorlist, it shows a message "Invalid release/repo/arch combination"
 
-5. Changing a valid baseurl
+#### 5. Changing a valid baseurl ####
 ```
 [centos@ip-10 yum.repos.d]$ vi CentOS-Base.repo
 [base]
@@ -110,12 +110,12 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 ```
 -> Changed a valid baseurl to download a package 
 
-6. 
+#### 6. ####
 ```
 yum clean all
 ```
 
-7. Check repolist after changing the invalid baseurl
+#### 7. Check repolist after changing the invalid baseurl ####
 ```
 [centos@ip-10 yum.repos.d]$ sudo yum repolist
 Loaded plugins: fastestmirror, presto
@@ -142,7 +142,7 @@ repolist: 7,734
 ```
 -> Now Extras and Updates repositories have availble packages to download
 
-8. Download the package you wanted
+#### 8. Download the package you wanted ####
 ```
 [centos@ip-10 yum.repos.d]$ yum install perl-DateTime perl-CPAN perl-Net-SSLeay perl-IO-Socket-SSL perl-Digest-SHA gcc -y
 
