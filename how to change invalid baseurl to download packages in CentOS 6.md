@@ -49,7 +49,7 @@ total 28
 -rw-r--r--. 1 root root 6259 May 18  2016 CentOS-Vault.repo 
 ```
 
-#### 4. Check ####
+#### 4. Check if the baseurl or mirrorlist are valid address ####
 ```
 4. [centos@ip-10 yum.repos.d]$ vi CentOS-Base.repo
 [base]
@@ -76,7 +76,7 @@ mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 ```
--> When trying to enter the mirrorlist, it shows a message "Invalid release/repo/arch combination"
+-> When trying to enter the mirrorlist, it shows a message "Invalid release/repo/arch combination" which means you got to find a valid site to get packages 
 
 #### 5. Changing a valid baseurl ####
 ```
@@ -110,7 +110,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 ```
 -> Changed a valid baseurl to download a package 
 
-#### 6. ####
+#### 6.Removing the caches of repositories which are enabled in /etc/yum.repos.d/*.repo ####
 ```
 yum clean all
 ```
